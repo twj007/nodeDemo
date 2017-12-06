@@ -1,0 +1,166 @@
+<html>
+	<script type="text/javascript">
+	// function foo() {
+	// 	function bar(a) {
+	// 		var i =3;
+	// 		console.log(a+i);
+	// 	}
+
+	// 	for(let i=0; i<10; i++){
+	// 		bar(i*2);
+	// 	}
+
+	// }
+	// foo();
+	// 块作用域
+	// for(var i=0; i<10; i++){
+	// 	console.log(i);
+	// }
+	// console.log('i='+i);
+	// if(j === undefined){
+	// 	let j = 10;
+	// 	console.log('1'+j);
+	// }
+	// console.log(j);
+	// for(let i=0; i<10; i++){
+	// 	console.log(i);
+	// }
+	// console.log(i);
+	// 闭包，在循环结束之后才执行回调函数
+	// for(var i =0; i<5; i++){
+	// 	setTimeout(function timer(){
+	// 		console.log(i)
+	// 	}, i*1000);
+	// }
+	//立即执行
+	// for(var i =0; i<5; i++){
+	// 	setTimeout(function timer(){
+	// 		console.log(i)
+	// 	}(), i*1000);
+	// }
+
+	//执行结果
+	//0 error.html:38:4
+	//1 error.html:38:4
+	//2 error.html:38:4
+	//3 error.html:38:4
+	//4 error.html:38:4
+	//5 error.html:32:4(5次)可以看出回调函数的执行是在循环之后
+	
+	// for(let i =0; i<5; i++){
+	// 	setTimeout(function timer(){
+	// 		console.log(i)
+	// 	}, i*1000);
+	// }
+	//console.log(i);
+	//关于this
+	// function foo(num) {
+	// 	console.log("foo"+ num);
+	// 	this.count++;
+	// }
+	// foo.count = 0;
+	// var i;
+	// for(i = 0; i<10; i++) {
+	// 	if(i > 5){
+	// 		foo(i);
+	// 	}
+	// }
+	// console.log( foo.count); 
+	// var a = 10;
+	// function foo() {
+	// 	var a = 2;
+	// 	this.bar(this);
+	// }
+	// function bar(obj) {
+	// 	var it = obj;
+	// 	console.log(it.a);
+	// }
+	// foo();
+	// 
+	// function baz(){
+	// 	console.log('baz');
+	// 	bar();
+	// }
+	// function bar(){
+	// 	console.log('bar');
+	// 	foo();
+	// }
+	// function foo(){
+	// 	console.log('foo');
+	// }
+	// baz();
+	// 隐式绑定
+	// function foo() {
+	// 	console.log( this.a);
+	// }
+
+	// var obj = {
+	// 	a: 233,
+	// 	foo: foo
+	// };
+	// obj.foo();
+	//显示绑定 
+	//①硬绑定
+	// function foo(){
+	// 	console.log(this.a);
+	// }
+
+	var obj = {
+		a : 2
+	};
+	// function callFoo(){
+	// 	foo.call(obj);
+	// }
+
+	// callFoo();
+	//②通过创建辅助函数
+	// function foo2(sth) {
+	// 	console.log(this.a, sth);
+	// }
+	// function bind(fn, obj) {
+	// 	return function() {
+	// 		return fn.apply(obj, arguments);
+	// 	}
+	// }
+	// var bar = bind(foo2, obj);
+	// bar(3);
+	// 通过new绑定对象
+	// function foo(a) {
+	// 	this.a = a
+	// }
+	// var f = new foo(1);
+	// console.log(f.a);
+	// 间接引用
+	// function foo() {
+
+	// 	console.log( this.a);
+	// }
+	// var a = 2;
+	// var o = {a: 3, foo: foo};
+	// var p = {a: 4, foo: foo};
+	// o.foo();
+	// (p.foo = o.foo)();
+	// this词法
+	function foo() {
+		return (a) => {
+			console.log(this.a);
+		}
+	}
+
+	var obj1 = {
+		a: 2
+	};
+	var obj2 = {
+		a: 5
+	};
+	var bar = foo.call(obj1);
+	bar.call(obj2);
+	</script>
+	<head>
+		<meta charset="utf-8">
+		<title>出错了</title>
+	</head>
+	<body>
+		出错了！
+	</body>
+</html>

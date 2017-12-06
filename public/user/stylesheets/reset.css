@@ -1,0 +1,176 @@
+.icon-sousuo:before {
+  content: "\e600"; }
+
+.icon-jiahao:before {
+  content: "\e601"; }
+
+.icon-jiahao1:before {
+  content: "\e602"; }
+
+.icon-jianhao:before {
+  content: "\e603"; }
+
+.icon-del:before {
+  content: "\e604"; }
+
+.icon-wenhaoweiwanchengyanzheng:before {
+  content: "\e605"; }
+
+.icon-jinlingyingcaiicon01:before {
+  content: "\e606"; }
+
+.icon-jinlingyingcaiicon02:before {
+  content: "\e607"; }
+
+.icon-checkbox:before {
+  content: "\e60f"; }
+
+.icon-xiazai:before {
+  content: "\e608"; }
+
+.icon-appxiugaiicon10:before {
+  content: "\e609"; }
+
+.icon-jiahao2:before {
+  content: "\e60a"; }
+
+.icon-gantanhao:before {
+  content: "\e60b"; }
+
+.icon-x:before {
+  content: "\e60c"; }
+
+.icon-test07:before {
+  content: "\e610"; }
+
+.icon-save:before {
+  content: "\e611"; }
+
+.icon-dui:before {
+  content: "\e60d"; }
+
+.icon-jianhao1:before {
+  content: "\e60e"; }
+
+html,
+body {
+  font-family: 'Helvetica Neue', Helvetica, 'Microsoft YaHei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif; }
+
+.comWidth {
+  width: 1200px;
+  margin: 0 auto; }
+
+.userTitle h1 {
+  font: normal 24px/24px Microsoft YaHei; }
+
+a {
+  font-size: 12px;
+  color: #666;
+  text-decoration: none; }
+
+a:visited {
+  color: #666; }
+
+a:hover {
+  color: #2277e6; }
+
+body, h1, h2, h3, h4, h5, h6, p, dl, dd, ul, ol, pre, form, input, textarea, th, td, select {
+  margin: 0;
+  padding: 0; }
+
+strong,
+b,
+em,
+i {
+  font-weight: normal;
+  font-style: normal; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: 0;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse; }
+
+textarea {
+  resize: none;
+  overflow: auto;
+  outline: none; }
+
+button {
+  outline: none;
+  cursor: pointer; }
+
+input:focus {
+  outline: none; }
+
+input[type=button] {
+  cursor: pointer; }
+
+select {
+  outline: none; }
+
+/** css reset end */
+/** css clearfix start */
+.clearfix:after {
+  display: block;
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
+  content: ""; }
+
+.clearfix {
+  *zoom: 1; }
+
+/** css clearfix end */
+/** css public start */
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+a:link,
+a:hover,
+a:active {
+  text-decoration: none; }
+
+input[type='radio']:active {
+  border-color: #c6c6c6;
+  background: #ebebeb; }
+
+input[type='radio']:checked {
+  background: #fff; }
+
+input[type='radio'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  margin: 0;
+  cursor: pointer;
+  vertical-align: bottom;
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 1px;
+  box-sizing: border-box;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%; }
+
+input[type='radio']:checked::after {
+  content: url("/user/images/icon_radio.png");
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: 4px; }
+
+::-ms-clear, ::-ms-reveal {
+  display: none !important; }

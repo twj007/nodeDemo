@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+var debug = require('debug')('app');
+var cluster = require('express-cluster');
+
+/**
+ * make a log directory, just in case it isn't there.
+ */
+try {
+  require('fs').mkdirSync('./log');
+} catch (e) {
+  if (e.code != 'EEXIST') {
+    console.error("Could not set up log directory, error was: ", e);
+    process.exit(1);
+  }
+}
+
+/**
+ * Initialise log4js first, so we don't miss any log messages
+ */
+// var log4js = require('log4js');
+// log4js.configure('./config/log4js.json');
+
+// var log = log4js.getLogger("startup");
+//指定当前node的环境是all，即任何请求都可以路由到（当然是写了的）
+process.env.NODE_ENV  = 'all';
+
+//let's start up a cluster
+cluster(function() {
+  var app = require('../app');
+
+  app.set('port', 10000);
+
+  var server = app.listen(10000, function() {
+    console.log('Express server listening on port ', server.address().port, " with pid ", process.pid );
+  });
+});

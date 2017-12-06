@@ -1,0 +1,67 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="../../user/stylesheets/reset.css">
+</head>
+<style>
+	@font-face{
+		font-family: "iconfont";
+		src: url("/common/lib/iconfont/iconfont.eot?t=1477560590");
+		src: url("/common/lib/iconfont/iconfont.eot?t=1477560590#iefix") 
+			 format("embedded-opentype"), 
+			 url("/common/lib/iconfont/iconfont.woff?t=1477560590")
+			 format("woff"),
+			 url("/common/lib/iconfont/iconfont.ttf?t=1477560590")
+			 format("truetype"),
+			 url("/common/lib/iconfont/iconfont.svg?t=1477560590#iconfont")
+			 format("svg");
+  			/* iOS 4.1- */ 
+	}
+	li{
+		width: 100px;
+		height: 26px;
+		padding: 37px 0;
+		list-style: none;
+	}
+	a{
+		float: left;
+	    cursor: pointer;
+	    border: 1px solid #ddd;
+	    height: 24px;
+	    line-height: 24px;
+	    width: 24px;
+	    text-align: center;
+	    color: #2c8ee5;
+	    text-decoration: none;
+	}			
+	.goodsCount{
+		    height: 24px;
+		    float: left;
+		    border: 1px solid #ddd;
+		    width: 48px;
+		    margin-right: -1px;
+		    margin-left: -1px;
+		    text-align: center;
+		    line-height: 24px;
+	}
+	.iconfront{
+		    font-family: iconfont!important;
+		    font-size: 16px;
+		    font-style: normal;
+		    -webkit-font-smoothing: antialiased;
+		    -webkit-text-stroke-width: .2px;
+		    -moz-osx-font-smoothing: grayscale;
+	}
+
+</style>
+<body>
+	<li class="countControl">
+		<div countOperate="">
+			<a href="#" class="reduce iconfront">&#xe603;</a>
+			<input type="text" class="goodsCount" value="1">
+			<a href="#" class="add iconfront">&#xe602;</a>
+		</div>
+	</li>
+</body>
+</html>

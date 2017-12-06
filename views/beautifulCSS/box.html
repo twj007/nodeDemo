@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<style>
+	.box{
+		width:400px;
+		height: 400px;
+		background: #eee;
+		margin: 50px;
+	}
+	.b1{
+		border-radius: 3em 1em;
+	}
+	.b2{
+		/*嵌入的box-shadow*/
+		box-shadow: inset 0 5em #3bc
+	}
+	.b3{
+		outline: 1.5em double lightgreen
+	}
+	.b4{
+		box-sizing: content-box;
+		width: 75%;
+		padding-left: 25%
+	}
+	.b5{
+		box-sizing: border-box;
+		width: 75%;
+		padding-left: 25%
+	}
+	input[type="text"]{
+		 /* Flexibility */
+	    box-sizing: border-box;
+	    width: 100%;
+
+	    /* Styling */
+	    padding: .4em .55em;
+	    font-size: inherit;
+	    font-family: inherit;
+	    color: inherit;
+	    border: 0;
+	    border-radius: .25em;
+	    border:1px solid #eee;
+	    outline: none
+	}
+	.d1{
+		display: inline;
+	}
+	.d4{
+		display: inline-block;
+	}
+	.d5{
+		display: block;
+	}
+	   .vertical-outer {
+        display: table;
+        height: 10em
+    }
+
+    .vertical-inner {
+    	background: #eee;
+        display: table-cell;
+        vertical-align: middle
+    }
+
+     .grid {
+        border: .125rem solid;
+        text-align: justify;
+        font-size: 0;
+        padding: 4% 4% 0 4%
+    }
+
+    .grid-box {
+        font-size: 1rem;
+        display: inline-block;
+        background: #eee;
+        border: .125em solid;
+        width: 30%;
+        padding: 2%
+    }
+
+    /* All but the last 3 boxes */
+    .grid-box:nth-last-child(n+5) {
+        margin-bottom: 4%
+    }
+
+    .break {
+        display: inline-block;
+        width: 30%;
+        height: 0
+    }
+</style>
+<body>
+	<div class="box b1">It's a box</div>
+	<div class="box b2">It's a box</div>
+	<div class="box b3">It's a box</div>
+	<input type="text" placeholder="It's a text">
+	<div class="box b4">It's a box</div>
+	<div class="box b5">It's a box</div>
+	<div class="box d1">inline</div>
+	<div class="box d1">inline</div>
+	<div class="box d4">inline-block</div>
+	<div class="box d4">inline-block</div>
+	<div class="box d5">inline</div>
+	<div class="vertical-outer">
+    <div class="vertical-inner">
+        <p>I’m so centered it’s not even funny.</p>
+    </div>
+    <div class="grid">
+    	<div class="grid-box">column</div>
+    	<div class="grid-box">column</div>
+    	<div class="grid-box">column</div>
+    	<div class="grid-box">column</div>
+    	<div class="grid-box">column</div>
+    	<div class="grid-box">column</div>
+    	<div class="break"></div>
+    </div>
+</div>
+</body>
+</html>
