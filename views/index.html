@@ -1,3 +1,330 @@
-{{include 'header'}}
-<span>{{title}}时间{{time}}</span>
-{{include 'footer'}}
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>二级菜单demo</title>
+	<link rel="stylesheet" type="text/css" href="../../public/user/stylesheets/index.css">
+	<style type="text/css">
+		body{
+			background: #eee;
+		}
+		ul li {
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		.allTotalType{
+			display: block;
+			width: 140px;
+			height: 43px;
+			background-color: #308de5;
+			color:white;
+			font-size: 16px;
+			text-align: center;
+			line-height: 40px;
+			
+			border-radius: 2px;
+		}
+	.allShoppingType{
+		position: relative;
+		display: inline-block;
+	}
+	.skuTypeMenuList{
+		padding:0px;
+		margin-top: 0px; 
+	}
+	.firstSkuTypeLevelMenuList{
+		padding: 0px;
+		width: 135px;
+		height: 65px;
+		border-bottom: 1px dashed #ddd;
+		text-align: center;
+		line-height: 70px;
+		background: white;
+		opacity: 0.9;
+		border-left: 5px solid white;
+
+	}
+	.firstSkuTypeLevelMenuList a{
+		color: #6d6367;
+	}
+	.skuTypeTwoMenuListContShow{
+		position: absolute;
+		top: 50px;
+		left: 149px;
+		width: 730px;
+    	min-height: 400px;
+    	background-color: white;
+		border: 1px solid #ddd;
+		opacity: 0.9;
+	}
+	.skuTypeLeftContArea{
+		width: 476px;
+		margin: 20px 0;
+		padding: 0 20px;
+		
+	}
+	.skuTypeLeftContArea a{
+		color: #503636;
+	}
+	.skuTypeLeftContArea dl{
+		display: inline-block;
+
+		width: 228px;
+	}
+	.skuTypeLeftContArea dt{
+		text-align: left;
+		border-bottom: 1px solid #ddd;
+	}
+	dd{
+		width: 90px;
+		height: 20px;
+		border-right: 1px solid #ddd;
+		padding-right: 10px;
+		margin-top: 5px;
+		display: inline-block;
+	}
+	.skuTypeLeftContArea{
+		float: left;
+	}
+	.skuTypeRightContArea{
+		width: 172px;
+		padding: 22px 20px 12px;
+		background-color: #fafafa;
+		float: left;
+		margin: 20px 0;
+		height: 350px;
+		border-left: 1px dashed #ddd;
+	}
+	.first-level-row:hover .clearfix{
+		display: block;
+	}
+	.active{
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+		border-left: 5px solid #308de5;
+	}
+	</style>
+</head>
+<body>
+	<div class="allShoppingType">
+		<i class="allShoppingType_ico"></i>
+		<a href="javascript:;" class="allTotalType">全部商品类型</a>
+		<ul class="skuTypeMenuList">
+			<li class="firstSkuTypeLevelMenuList">
+				<div class="first-level-row"><i class="nfnk0"></i><a href="">母婴用品</a></div>
+			</li>
+
+			<li class="firstSkuTypeLevelMenuList">
+				<div class="first-level-row"><i class="nfnk0"></i><a href="">母婴用品</a></div>
+			</li>
+
+			<li class="firstSkuTypeLevelMenuList">
+				<div class="first-level-row"><i class="nfnk0"></i><a href="">母婴用品</a></div>
+			</li>
+
+			<li class="firstSkuTypeLevelMenuList">
+				<div class="first-level-row"><i class="nfnk0"></i><a href="">母婴用品</a></div>
+			</li>
+		</ul>
+		<div class="skuMenuListCont"></div>
+	</div>
+
+	<div class="skuTypeTwoMenuListCont" >
+		<div class="skuTypeTwoMenuListContShow clearfix" style="display:none;">
+			<div class="skuTypeLeftContArea">
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+			</div>
+
+			<div class="skuTypeRightContArea">1</div>
+		</div>
+		
+		<div class="skuTypeTwoMenuListContShow clearfix" style="display:none;">
+			<div class="skuTypeLeftContArea">
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+			</div>
+			<div class="skuTypeRightContArea">2</div>
+		</div>
+		<div class="skuTypeTwoMenuListContShow clearfix" style="display: none;">
+			<div class="skuTypeLeftContArea">
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+			</div>
+			<div class="skuTypeRightContArea">3</div>
+		</div>
+
+		<div class="skuTypeTwoMenuListContShow clearfix" style="display:none;">
+			<div class="skuTypeLeftContArea">
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+				<dl>
+					<dt><a href="#">品牌</a></dt>
+					<div class="detailSkuType">
+						<dd><a href="#">贺本清</a></dd>
+						<dd><a href="#">贺本清</a></dd>
+					</div>
+				</dl>
+			</div>
+			<div class="skuTypeRightContArea">4</div>
+		</div>
+
+	</div>
+</body>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.firstSkuTypeLevelMenuList, .skuTypeTwoMenuListContShow ').hover(function(){
+			
+				var $index = $(this).index();
+				//console.log($index);
+			if(this.className == "firstSkuTypeLevelMenuList"){	
+				$(this).addClass('active');
+				if($index>0){
+					$(".firstSkuTypeLevelMenuList").eq($index-1).css('border-bottom', '0');
+				}
+			}	
+			$('.skuTypeTwoMenuListContShow').eq($index).css("display", "block");
+		}, function(){
+			var $index = $(this).index();
+			
+			if($index>0){
+				$(".firstSkuTypeLevelMenuList").eq($index-1).css('border-bottom', '1px dashed #eee');
+			}
+			//console.log($index);
+			$(this).removeClass('active');
+			
+			$('.skuTypeTwoMenuListContShow').eq($index).css("display", "none");
+		});
+	});
+</script>
+</html>
+
+
+

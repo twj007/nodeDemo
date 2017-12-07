@@ -141,20 +141,49 @@
 	// o.foo();
 	// (p.foo = o.foo)();
 	// this词法
-	function foo() {
-		return (a) => {
-			console.log(this.a);
-		}
-	}
+	// function foo() {
+	// 	return (a) => {
+	// 		console.log(this.a);
+	// 	}
+	// }
 
-	var obj1 = {
-		a: 2
-	};
-	var obj2 = {
-		a: 5
-	};
-	var bar = foo.call(obj1);
-	bar.call(obj2);
+	// var obj1 = {
+	// 	a: 2
+	// };
+	// var obj2 = {
+	// 	a: 5
+	// };
+	// var bar = foo.call(obj1);
+	// bar.call(obj2);
+	// 数组复制对象=> 对于普通类型，浅复制，对于object, Array类型，深复制。
+	// function aFunction(){
+	// 	console.log(111);
+	// }
+	// var obj = {
+	// 	c: true
+	// };
+	// var aArray = [];
+	// var myObj = {
+	// 	a: 2,
+	// 	b: aFunction,
+	// 	c: aArray,
+	// 	d: obj
+	// };
+
+	// aArray.push(obj, myObj);
+	// console.log(aArray);
+	// 继承
+	//prototype
+	function test() {
+		var i = 1;
+		console.log(++i);
+	}
+	var v1 = test.prototype;
+	var v2 = test.prototype;
+	var v3 = new test();
+	console.log(v1 === Object.getPrototypeOf(v3));
+	v1;
+	v2;
 	</script>
 	<head>
 		<meta charset="utf-8">

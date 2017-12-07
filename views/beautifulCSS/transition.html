@@ -1,0 +1,45 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>transition动画效果</title>
+	<style type="text/css">
+		.show{
+			background-image: linear-gradient(135deg, #723362, #9d223c);
+    		background-color: #9d223c;
+    		color: #fff;
+    		width: 500px;
+    		height: 100px;
+    		font-size:30px;
+    		display: block;
+		}
+		.show span{
+			opacity: 0;
+			line-height: 140px
+			transition: opacity 1300ms;
+		}
+		.show span:nth-child(1)  { transition-delay:  200ms }
+		.show span:nth-child(2)  { transition-delay: 1200ms }
+		.show span:nth-child(3)  { transition-delay:  800ms }
+		.show span:nth-child(4)  { transition-delay:  300ms }
+		.show span:nth-child(5)  { transition-delay:  700ms }
+		.show span:nth-child(6)  { transition-delay:  600ms }
+		.show span:nth-child(7)  { transition-delay:  400ms }
+		.show span:nth-child(8)  { transition-delay:  900ms }
+		.show span:nth-child(9)  { transition-delay:  700ms }
+		.show span:nth-child(10) { transition-delay:   50ms }
+
+		.show:hover span {
+		    opacity: 1
+		}
+	</style>
+</head>
+<body>
+	<div class="show">
+		<span>show</span>
+		<span>show</span>
+		<span>show</span>
+		<span>show</span>
+		<span>show</span>
+	</div>
+</body>
+</html>
